@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,800;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.App {
+
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.bo_ser{
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.app {
+  margin: 2rem;
+  position: relative;
+}
+
+
+.cards {
+  margin-top: 120px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card {
+  box-shadow: 0 0 10px 5px #e1e5ee;
+  border-radius: 12px;
+  min-width: 28rem;
+  display: flex;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-color: #1163ba;
+}
+
+
+.img1 {
+  width: 14rem;
+  height: 11rem;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.card-title {
+  line-height: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  line-height: 1.2rem;
+}
+
+
+.card-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.card-button:hover {
+  background-color: #0056b3;
+}
+
+.card-button::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.card-button:hover::after {
+  width: 100%;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card-button:hover {
+  animation: pulse 1s infinite;
+}
+
+@media screen and (min-width: 300px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+    min-width: 14rem;
+  }
+}
+
+
+/* Responsive CSS for Drag and Drop Container */
+
+.img1_drag_drop{
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+.im_drag{
+  height: 100%;
+  width: 100%;
+  object-fit:cover ;
+}
+
+
+.drag-drop-container {
+  position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+
+
+/* image drag*/
+
+.container {
+  position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.previewContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.imgPreview {
+  position: relative;
+  text-align: center;
+  margin: 5px 15px;
+  height: 200px;
+  width: 500px;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #808080;
+  border-top: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+}
+
+.imgPreview img {
+  width: 100%;
+  height: 100%;
+}
+
+.transparent-box {
+  top: 200%;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+}
+
+
+
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fileInput {
+  border-bottom: 4px solid #d3d3d3;
+  border-right: 4px solid #d3d3d3;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  padding: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.submitButton {
+  padding: 12px;
+  background: #fff;
+  border: 4px solid #d3d3d3;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 10pt;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background: #efefef;
+}
+
+
+.hero{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+
+
+.img_back{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
